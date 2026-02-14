@@ -103,7 +103,8 @@ col_yes, col_no = st.columns(2)
 with col_yes:
     if st.button("YES! 😍"):
         st.balloons()
-        st.success("Yay! I knew you'd say yes! You're stuck with me forever now. Ab main tumhaara aur humaare nanhe 'Junior' ka khayal rakhne ke liye taiyaar hoon! 🍝🥂")
+        st.success("Yay! I knew you'd say yes! You're stuck with me forever now. 🍝🥂")
+        #  Ab main tumhaara aur humaare nanhe 'Junior' ka khayal rakhne ke liye taiyaar hoon!
         st.snow()
 
 with col_no:
