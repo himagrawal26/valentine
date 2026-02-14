@@ -40,15 +40,24 @@ st.markdown("""
 
 # --- HELPER FUNCTIONS ---
 def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
+    try:
+        r = requests.get(url, timeout=5) # Add a timeout
+        if r.status_code != 200:
+            return None
+        return r.json()
+    except Exception:
         return None
-    return r.json()
 
-lottie_heart = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_02p796w4.json")
+# Use a confirmed working Lottie URL (Heart animation)
+lottie_url = "https://lottie.host/855905d5-8675-4009-8f0a-115f0133c94f/v7C0pI3C8O.json"
+lottie_heart = load_lottieurl(lottie_url)
 
 # --- HEADER ---
-st_lottie(lottie_heart, height=200, key="coding")
+if lottie_heart:
+    st_lottie(lottie_heart, height=200, key="coding")
+else:
+    st.write("💖") # Fallback to an emoji if the animation fails to load
+    
 st.markdown("<h1 class='main-title'>Happy Valentine's Day, Komal!</h1>", unsafe_allow_html=True)
 st.markdown(f"<p class='love-text'>From your favorite Data Scientist, <b>Himanshu</b></p>", unsafe_allow_html=True)
 
