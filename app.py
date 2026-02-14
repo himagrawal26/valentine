@@ -14,26 +14,26 @@ st.markdown("""
     }
     .main-title {
         font-family: 'Great Vibes', cursive;
-        color: #d63384;
+        color: #d63384 !important; /* Forced Pink */
         text-align: center;
         font-size: 3rem;
         margin-bottom: 0;
+        text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
     }
     .love-text {
         font-family: 'Helvetica Neue', sans-serif;
-        color: #4a4a4a;
+        color: #4a4a4a !important; /* Forced Dark Gray/Black */
         text-align: center;
         font-size: 1.2rem;
+        font-weight: 500;
     }
-    div.stButton > button {
-        width: 100%;
-        border-radius: 20px;
-        border: 2px solid #ff4b4b;
-        transition: 0.3s;
+    /* This forces all regular Streamlit text to stay dark */
+    .stMarkdown, p, div, label {
+        color: #31333F !important; 
     }
-    div.stButton > button:hover {
-        background-color: #ff4b4b;
-        color: white;
+    /* Style for the subheaders */
+    h3, h2, h1 {
+        color: #d63384 !important;
     }
     </style>
     """, unsafe_allow_html=True)
