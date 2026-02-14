@@ -50,7 +50,7 @@ lottie_heart = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_02p
 # --- HEADER ---
 st_lottie(lottie_heart, height=200, key="coding")
 st.markdown("<h1 class='main-title'>Happy Valentine's Day, Komal!</h1>", unsafe_allow_html=True)
-st.markdown(f"<p class='love-text'>From your favorite Data Scientist, <b>{**Himanshu**}</b></p>", unsafe_allow_html=True)
+st.markdown(f"<p class='love-text'>From your favorite Data Scientist, <b>Himanshu</b></p>", unsafe_allow_html=True)
 
 # --- REASONS SECTION ---
 st.write("---")
