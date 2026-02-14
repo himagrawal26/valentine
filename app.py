@@ -57,7 +57,7 @@ if lottie_heart:
     st_lottie(lottie_heart, height=200, key="coding")
 else:
     st.write("💖") # Fallback to an emoji if the animation fails to load
-    
+
 st.markdown("<h1 class='main-title'>Happy Valentine's Day, Komal!</h1>", unsafe_allow_html=True)
 st.markdown(f"<p class='love-text'>From your favorite Data Scientist, <b>Himanshu</b></p>", unsafe_allow_html=True)
 
@@ -65,7 +65,7 @@ st.markdown(f"<p class='love-text'>From your favorite Data Scientist, <b>Himansh
 st.write("---")
 st.subheader("🌸 Why I Love You")
 reasons = [
-    "✨ You are so sweet, you're giving me a sugar rush!",
+    "✨ You are so sweet, you are awesome.",
     "🏡 You make me feel so comfortable, anywhere feels like home.",
     "🌟 You are the best partner I could have asked for."
 ]
@@ -75,15 +75,25 @@ for reason in reasons:
 # --- PHOTO GALLERY ---
 st.write("---")
 st.subheader("📸 Our Best Moments")
-# Note: Ensure photo1.jpg, photo2.jpg, photo3.jpg are in your GitHub repo
+
+# List of your photos and their Hinglish captions
+photo_data = [
+    {"img": "photo1.jpg", "caption": "Humaari chemistry ka koi competition hi nahi hai! 🔥"},
+    {"img": "photo2.jpg", "caption": "Komal + Himanshu = The Perfect Model. 👩‍❤️‍👨"},
+    {"img": "photo3.jpg", "caption": "Tumhaari smile hi meri real success metric hai. ✅"}
+]
+
 cols = st.columns(3)
-photos = ["photo1.jpg", "photo2.jpg", "photo3.jpg"] 
 
 for i, col in enumerate(cols):
     with col:
-        # Placeholder logic: change these to your actual file names
-        st.image(photos[i], use_container_width=True, caption=f"Memory #{i+1}")
-
+        # Display the image with the Hinglish caption
+        st.image(
+            photo_data[i]["img"], 
+            use_container_width=True, 
+            caption=photo_data[i]["caption"]
+        )
+        
 # --- THE PROPOSAL SECTION ---
 st.write("---")
 st.markdown("<h3 style='text-align: center;'>Will you be my Valentine? 🌹</h3>", unsafe_allow_html=True)
